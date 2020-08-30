@@ -1,0 +1,331 @@
+/*
+ app naem : Solo Market,
+ created by : Amardeep Kesharwani,
+ date : 27-june-2020,
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  transition: 0.3s ease;
+  padding: 10px 25px;
+  border-radius: 2px;
+  color: #fff;
+}
+section {
+  margin: auto;
+}
+nav {
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+nav > a {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ff2e70;
+}
+.bar {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+.bar span {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #333;
+  margin: 2px;
+}
+header {
+  height: 240px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVWBPYaYJ3XoAIiwxBWU9fCuU0L8GUV4uUUw&usqp=CAU");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+header button {
+  background: #ff2e70;
+  margin-top: 15px;
+}
+.title {
+  margin: 30px 20px;
+  text-align: center;
+  color: #ff2e70;
+}
+.container {
+  padding: 20px;
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+@media (max-width:720px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width:420px) {
+  .product-list {
+    grid-template-columns:1fr;
+    grid-gap:0;
+  }
+}
+.product {
+  position: relative;
+  margin-bottom: 20px;
+  border: 1px solid #c0c0c0;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+.product-details {
+  margin-top: 10px;
+}
+.views {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 73, 149, 0.8);
+  transition: 0.3s ease;
+  opacity: 0;
+}
+.views button {
+  background: #fff;
+  color: #ff42ad;
+  padding: 10px 35px;
+  border-radius: 2px;
+  margin: 0 5px;
+}
+.views .buy-now {
+  background: #333;
+  color: #fff;
+}
+.product:hover > .views {
+  opacity: 1;
+}
+.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  color: #fff;
+  background: #ff2e70;
+  font-size: 14px;
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
+}
+.product del {
+  color: #f33448;
+  display: inline-block;
+  margin-left: 10px;
+}
+.copyright {
+  text-align: center;
+  padding: 5px 0;
+  border-top: 1px solid #555;
+  margin: 0 20px;
+}
+.sec2 .flex {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sec2 h2 {
+  color: #ff2e70;
+}
+.btn-group {
+  display: flex;
+  padding: 5px 15px;
+  max-width: 560px;
+}
+.btn-group button {
+  flex: 1;
+  margin: 5px;
+  font-size: 16px;
+}
+.sec2, .sec3 {
+  max-width: 560px;
+  margin: auto;
+}
+.cancel {
+  background: #333;
+}
+.buy {
+  background: #ff2e70;
+}
+.close,
+.close-sec6 {
+  background: transparent;
+  color: #000;
+  font-size: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+.close-sec6 {
+  left: auto;
+  right: 0;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form-group input,
+.form-group textarea {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  border-radius: 2px;
+  transition: 300ms;
+}
+input:focus,
+textarea:focus {
+  border-color: #ff2e70;
+}
+.s-btn {
+  background: #ff2e70;
+  width: 100%;
+  font-size: 16px;
+}
+textarea {
+  resize: none;
+  height: 150px;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.card p {
+  margin-bottom: 5px;
+}
+.card img {
+  width: 100px;
+}
+.flex {
+  display: flex;
+}
+.checkout {
+  background: #333;
+  font-size: 16px;
+  padding: 10px 35px;
+  margin: 20px 0;
+}
+.sec5 .flex {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.thanks h1 {
+  color: #ff2e70;
+  opacity: 0.5;
+  font-size: 50px;
+}
+.home {
+  background: #ff2e70;
+  margin-top: 10px;
+}
+.sec6 {
+  background: #f5f5f5;
+}
+.sec-title {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+.sec-title h2 {
+  color: #ff2e70;
+}
+.cart-list {
+  padding: 25px 0;
+}
+
+.hide {
+  display: none;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  transition: .5s ease;
+  transform: translateX(-100%);
+  z-index: 9;
+}
+.sidebar.active {
+  transform: translateX(0);
+}
+.sidebar h1 {
+  color: #ff2e70;
+  margin: 10px 10px 20px;
+}
+.sidebar ul li{
+  list-style: none;
+  padding:5px 10px;
+  transition: 0.3s ease;
+}
+.sidebar ul li:hover {
+  color: #f33448;
+  background: #f5f5f5;
+}
+.close-sidebar {
+ font-size: 2rem;
+ position: absolute;
+ top: 20px;
+ right: 20px;
+}
